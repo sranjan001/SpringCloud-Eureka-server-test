@@ -1,0 +1,17 @@
+applications:
+  - name: eureka-test-server
+    path: target/SpringCloud-Eureka-server-test-0.0.1-SNAPSHOT.jar
+    routes:
+      - route: springcloud-eureka-server-test.cfapps.io
+    memory: 1G
+    instances: 1
+    env:
+#      GRANT_TYPE: client_credentials
+    #    SECURITY_USER_NAME: actuator
+    #    SECURITY_USER_PASSWORD: operations4red
+    services:
+      - my-service-registry
+#      - tracker-service-registry
+#      - tracker-circuit-breaker-dashboard
+#      - tracker-sso
+#      - tracker-config-server
